@@ -46,14 +46,10 @@ public class JasperController {
      * Gera e exibe ou realiza o download de um relatório PDF JasperReports conforme
      * os parâmetros fornecidos.
      *
-     * @param code     código do relatório a ser gerado (deve estar mapeado no
-     *                 serviço).
-     * @param acao     define a ação: "v" para visualizar inline ou "d" para
-     *                 download.
-     * @param tipo     tipo do relatório a ser gerado, conforme o enum
-     *                 {@link TipoRelatorio}.
-     * @param response objeto {@link HttpServletResponse} usado para configurar e
-     *                 enviar a resposta HTTP.
+     * @param code código do relatório a ser gerado (deve estar mapeado no serviço).
+     * @param acao define a ação: "v" para visualizar inline ou "d" para download.
+     * @param tipo tipo do relatório a ser gerado, conforme o enum {@link TipoRelatorio}.
+     * @param response objeto {@link HttpServletResponse} usado para configurar e enviar a resposta HTTP.
      * @throws IOException se ocorrer falha ao escrever a resposta HTTP.
      */
     @GetMapping("/pdf/condutores")
@@ -89,3 +85,4 @@ public class JasperController {
 
 }
 ```
+
