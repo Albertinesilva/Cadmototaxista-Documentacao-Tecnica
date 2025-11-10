@@ -121,3 +121,43 @@ spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=
 spring.jpa.properties.hibernate.hbm2ddl.delimiter=;
 spring.jpa.properties.hibernate.format_sql=true
 ```
+> 💡 **Observação**: O arquivo application.properties deve ser ajustado conforme o ambiente, principalmente nas propriedades de conexão com o banco (spring.datasource.url, username e password).
+---
+
+Encerramento Controlado
+
+O encerramento da execução do sistema pode ser realizado de forma simples e segura.
+Caso a aplicação esteja sendo executada via terminal, basta pressionar a combinação de teclas `Ctrl + C`, o que interrompe o processo do servidor embutido do Spring Boot (geralmente o `Tomcat`).
+
+Se a aplicação estiver sendo executada a partir de uma `IDE` (como `IntelliJ IDEA`, `Eclipse` ou `VS Code`), o encerramento pode ser feito diretamente pelo painel de controle de execução, utilizando o botão **“Stop”** disponível na interface da IDE ou em extensões de gerenciamento de execução.
+
+Essa ação interrompe o servidor de aplicação de forma controlada, liberando as portas utilizadas e encerrando as conexões:
+
+- Conexões de banco de dados;
+- Threads em execução;
+- Cache e contexto de sessão.
+
+---
+Deploy da Aplicação no Heroku
+
+O deploy do sistema CADMOTOTAXISTA é realizado na plataforma Heroku, que oferece um ambiente de hospedagem em nuvem totalmente integrado ao Git.
+O processo de implantação foi configurado de forma automatizada, permitindo que, a cada push realizado no repositório remoto vinculado ao Heroku, a aplicação seja automaticamente compilada, empacotada e publicada no ambiente de produção.
+
+Esse mecanismo de integração contínua simplifica a atualização do sistema, dispensando etapas manuais de compilação e upload de artefatos.
+O fluxo padrão de implantação consiste nas seguintes etapas:
+
+1.Realizar o commit das alterações locais:
+```bash
+git add .
+git commit -m "Atualização de funcionalidades ou correções"
+```
+2.Enviar as alterações para o repositório remoto vinculado ao Heroku
+```bash
+git push ou git push heroku main
+```
+
+3.Após o envio, o Heroku executa automaticamente o build do projeto, configurando o ambiente de execução (Java + Spring Boot) e iniciando o servidor de aplicação.
+
+Uma vez concluído o processo, a aplicação fica disponível publicamente no endereço fornecido pela plataforma, geralmente no formato:
+[CADMOTOTAXISTA](https://cad-mototaxistas.herokuapp.com)
+Esse modelo de deploy contínuo garante agilidade, rastreabilidade e consistência nas publicações, sendo especialmente adequado para ambientes de desenvolvimento e demonstração acadêmica.
