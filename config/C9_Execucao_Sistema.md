@@ -52,3 +52,72 @@ Durante a execução, o sistema gera registros detalhados de eventos no console 
 - Registros de acesso e autenticação;
 - Eventos de persistência de dados e validações.
 - Esses logs são fundamentais para o monitoramento do ambiente de produção, permitindo identificar rapidamente falhas ou inconsistências.
+
+---
+
+4. Configuração do application.properties
+
+O arquivo `application.properties` concentra as principais configurações do sistema, incluindo idioma, banco de dados, codificação, controle de sessões, envio de e-mails e integrações externas.
+Os parâmetros sensíveis (usuário, senha e chaves de segurança) são definidos como variáveis de ambiente para garantir segurança e portabilidade entre os ambientes de desenvolvimento e produção.
+
+```properties
+# LOCALE
+spring.web.locale-resolver=fixed
+spring.web.locale=pt_BR
+
+# POSTGRESQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/cad_mototaxista?createDatabaseIfNotExist=true&serverTimezone=America/Sao_Paulo
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=${POSTGRES_DATASOURCE_USER}
+spring.datasource.password=${POSTGRES_DATASOURCE_PASSWORD}
+logging.level.org.springframework=DEBUG
+logging.level.org.flywaydb=DEBUG
+
+# JPA
+# spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+# spring.jpa.open-in-view=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Codificação de scripts SQL e requisições HTTP
+spring.sql.init.encoding=UTF-8
+server.servlet.encoding.charset=UTF-8
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
+
+# Flyway
+spring.flyway.enabled=true
+
+# Inicialização de scripts SQL
+spring.sql.init.mode=never
+spring.sql.init.platform=postgres
+spring.sql.init.data-locations=classpath:db/data/S*__*.sql
+
+# THYMELEAF
+spring.thymeleaf.cache=false
+
+# URLs
+backend.url=http://localhost:8080
+frontend.Url=email/confirmacao
+
+# JAVAMAIL
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${MAIL_USERNAME}
+spring.mail.password=${MAIL_PASSWORD}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
+spring.mail.test-connection=true
+
+# SESSÕES E SEGURANÇA
+server.servlet.session.timeout=${SESSION_TIMEOUT}
+app.security.remember-me-key=${REMEMBER_ME_KEY}
+
+# Geração opcional de script de banco
+spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
+spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create.sql
+spring.jpa.properties.hibernate.hbm2ddl.delimiter=;
+spring.jpa.properties.hibernate.format_sql=true
+```
