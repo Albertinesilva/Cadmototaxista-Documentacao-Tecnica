@@ -1,3 +1,17 @@
+﻿<h2 align="center">CadMototaxista - Documentação Técnica</h2>
+
+### Repositórios (UsuarioRepository)
+
+O **UsuarioRepository** é responsável por abstrair o acesso à persistência de dados da entidade **Usuario**, utilizando **Spring Data JPA**.  
+
+Principais responsabilidades:
+- Buscar usuários pelo **email**;  
+- Buscar usuários pelo **email ou descrição do perfil**, com suporte à paginação;  
+- Buscar usuários por **ID** considerando perfis específicos;  
+- Buscar usuários ativos pelo **email**;  
+- Reduzir código repetitivo e centralizar operações de persistência.
+---
+
 ```java
 package br.gov.ba.saj.smtt.cadmototaxistas.security.repositories;
 
