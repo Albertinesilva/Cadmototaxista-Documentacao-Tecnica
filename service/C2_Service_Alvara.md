@@ -1,3 +1,15 @@
+﻿<h2 align="center">CadMototaxista - Documentação Técnica</h2>
+
+### Service do Módulo de Alvará
+
+O **Service** desta subseção é responsável pela **geração dos relatórios JasperReports** utilizados pelo sistema, incluindo a emissão de alvarás dos mototaxistas e motofretistas vinculados ao cadastro de condutores e motocicletas.
+
+Principais responsabilidades:
+- Integrar com o mecanismo de geração de relatórios (.jasper);  
+- Injetar parâmetros e estabelecer conexão com o banco de dados;  
+- Centralizar as regras de geração, garantindo rastreabilidade, padronização e manutenção simplificada dos relatórios.
+---
+
 ```java
 package br.gov.ba.saj.smtt.cadmototaxistas.reports.service;
 
