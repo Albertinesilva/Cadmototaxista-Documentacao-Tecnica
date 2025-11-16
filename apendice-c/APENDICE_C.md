@@ -1,5 +1,9 @@
 <h2 align="center">CAD-MOTOTAXISTA - Documentação Técnica</h2>
 
+<p align="justify">
+O Apêndice C organiza algumas das principais listagens e versões das tecnologias empregadas no sistema CAD-MOTOTAXISTA, reunindo artefatos fundamentais para a compreensão da arquitetura e da infraestrutura da aplicação. No quadro a seguir, o leitor encontrará desde o conjunto de tecnologias utilizadas (C.1) até os procedimentos de execução e acesso ao ambiente produtivo (C.3 e C.3.1). Também são apresentados trechos estruturais referentes ao Controller e ao Service do módulo de Alvará (C.4 e C.5), componentes de segurança e autenticação (C.6), repositórios responsáveis pelo acesso e persistência de dados (C.7), regras de negócio classificadas como sensíveis (C.8) e a integração externa com o serviço ViaCEP (C.8.1). Esses elementos fornecem rastreabilidade técnica, padronização dos artefatos e suporte à manutenção evolutiva da aplicação.
+</p>
+
 <table border="2" align="center" style="border-collapse: collapse; text-align:center;">
   <thead>
     <tr style="background-color:#2F4F4F; color:white;">
@@ -63,4 +67,5 @@
     </tr>
   </tbody>
 </table>
+
 
