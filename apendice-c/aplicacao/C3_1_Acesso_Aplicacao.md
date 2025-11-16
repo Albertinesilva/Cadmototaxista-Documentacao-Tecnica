@@ -1,6 +1,6 @@
 <h2 align="center">CAD-MOTOTAXISTA - Documentação Técnica</h2>
 
-O ambiente de produção do sistema CAD-MOTOTAXISTA encontra-se disponível para avaliação funcional, permitindo a análise de seus módulos, fluxos operacionais e integrações. O acesso demonstrativo fornece uma visão completa das funcionalidades implementadas e de sua arquitetura em execução.
+O ambiente de produção disponibiliza o acesso à versão demonstrativa do sistema CAD-MOTOTAXISTA, destinada à avaliação técnica e à validação funcional da aplicação. Para fins de teste e navegação pela banca examinadora, foi criado um usuário institucional exclusivo para este ambiente, permitindo a exploração controlada das principais funcionalidades do sistema. As credenciais de autenticação encontram-se apresentadas a seguir.
 
 🔗 Acesso ao Sistema:
 
@@ -14,3 +14,6 @@ E-mail: cadmototaxista@saj.gov.br
 ```javaScript
 Senha: Teste@2025
 ```
+
+> ⚠️ Observação: Essas credenciais são destinadas apenas para avaliação acadêmica e não devem ser utilizadas em ambientes de produção.
+---
