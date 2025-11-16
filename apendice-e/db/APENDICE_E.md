@@ -5,23 +5,83 @@
 O sistema **CADMOTOTAXISTA** utiliza a ferramenta **Flyway** para realizar o **versionamento e controle de evolução do banco de dados**, garantindo rastreabilidade e integridade das alterações estruturais ao longo do ciclo de desenvolvimento.
 
 Principais características:
-- Executa scripts SQL em ordem sequencial, seguindo o padrão de nomenclatura `VXX__descricao.sql`;  
-- Cada versão (`V01`, `V02`, … `V27`) representa uma alteração, desde a **criação inicial das tabelas (CREATE TABLE)** até **ajustes e evoluções estruturais (ALTER TABLE)**;  
+
+- Executa scripts SQL em ordem sequencial, seguindo o padrão de nomenclatura `VXX__descricao.sql`;
+- Cada versão (`V01`, `V02`, … `V27`) representa uma alteração, desde a **criação inicial das tabelas (CREATE TABLE)** até **ajustes e evoluções estruturais (ALTER TABLE)**;
 - Facilita manutenção, auditoria e reprodutibilidade do banco de dados em diferentes ambientes de desenvolvimento e produção;
+
 #### 🔗 Disponivel em: [Migrations](https://github.com/Albertinesilva/Cadmototaxista-Documentacao-Tecnica/tree/main/db/migration)
+
 ---
+
 ### Estrutura DDL do Banco de Dados
 
 O sistema **CADMOTOTAXISTA** utiliza um **banco de dados relacional** projetado para garantir **integridade referencial, consistência e rastreabilidade** das informações da aplicação.
 
 Principais características:
-- Contempla entidades centrais: **condutor, cliente, funcionário, motocicleta e usuário**;  
-- Inclui tabelas auxiliares para gerenciamento de **endereços, contatos, CNHs e auditoria**;  
-- A **Definição de Dados (DDL)** estabelece as instruções SQL para criação de **tabelas, índices e restrições de integridade**, garantindo coerência entre chaves primárias e estrangeiras;  
+
+- Contempla entidades centrais: **condutor, cliente, funcionário, motocicleta e usuário**;
+- Inclui tabelas auxiliares para gerenciamento de **endereços, contatos, CNHs e auditoria**;
+- A **Definição de Dados (DDL)** estabelece as instruções SQL para criação de **tabelas, índices e restrições de integridade**, garantindo coerência entre chaves primárias e estrangeiras;
 - Centraliza todas as instruções que sustentam o **modelo lógico do banco de dados**, facilitando manutenção e auditoria.
+
 #### 🔗 Disponivel em: [DDL](https://github.com/Albertinesilva/Cadmototaxista-Documentacao-Tecnica/blob/main/db/DDL/C7_Estrutura_DDL_PostgreSQL.md)
+
 #### 🔗 Disponivel em: [Diagrama](https://github.com/Albertinesilva/Cadmototaxista-Documentacao-Tecnica/blob/main/db/diagrama/modelo_relacional.md)
 
+<p align="justify">
+O Apêndice E apresenta os artefatos fundamentais relacionados à modelagem relacional e ao projeto estrutural do sistema CAD-MOTOTAXISTA, abrangendo desde o controle de versões do banco de dados até os principais diagramas UML utilizados na engenharia de software. Este conjunto de documentos oferece uma visão integrada da arquitetura lógica e dos mecanismos de persistência, assegurando rastreabilidade, padronização e suporte à manutenção evolutiva do sistema. No quadro a seguir, estão organizados os elementos que compõem a modelagem e o projeto, bem como seus respectivos locais de acesso.
+</p>
 
-
-
+<table border="2" align="center" style="border-collapse: collapse; text-align:center;">
+  <thead>
+    <tr style="background-color:#2F4F4F; color:white;">
+      <th colspan="3">APÊNDICE E – MODELAGEM RELACIONAL, ESTRUTURA DDL E ARTEFATOS DE ENGENHARIA DE SOFTWARE</th>
+    </tr>
+    <tr style="background-color:#708090; color:white;">
+      <th>Tema/Listagem</th>
+      <th>Disponível em</th>
+      <th>Finalidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Banco de Dados -->
+    <tr style="background-color:#2F4F4F; color:white;">
+      <th colspan="3">Banco de Dados</th>
+    </tr>
+    <tr align="center">
+      <td>E.1 – Controle de Versões de Banco de Dados com Flyway</td>
+      <td>Scripts de Migração</td>
+      <td>Versionamento do BD</td>
+    </tr>
+    <tr align="center">
+      <td>E.2 – Estrutura DDL do Banco de Dados</td>
+      <td>Estrutura DDL</td>
+      <td>Definição das tabelas</td>
+    </tr>
+    <tr align="center">
+      <td>E.2.1 – Diagrama do Banco de Dados</td>
+      <td>Modelo Relacional</td>
+      <td>Visualização estrutural</td>
+    </tr>
+    <!-- UML -->
+    <tr style="background-color:#2F4F4F; color:white;">
+      <th colspan="3">Modelagem UML</th>
+    </tr>
+    <tr align="center">
+      <td>E.3 – Diagrama de Caso de Uso</td>
+      <td>UML – Caso de Uso</td>
+      <td>Requisitos funcionais</td>
+    </tr>
+    <tr align="center">
+      <td>E.4 – Diagrama de Classes</td>
+      <td>UML – Classes</td>
+      <td>Modelagem de entidades</td>
+    </tr>
+    <tr align="center">
+      <td>E.5 – Diagrama de Pacotes</td>
+      <td>UML – Pacotes (MVC)</td>
+      <td>Organização modular</td>
+    </tr>
+  </tbody>
+</table>
