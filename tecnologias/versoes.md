@@ -1,7 +1,6 @@
 <h2 align="center">CAD-MOTOTAXISTA - Documentação Técnica</h2>
 
-
-<table border="1" align="center" style="border-collapse: collapse; text-align:center;">
+<table border="2" align="center" style="border-collapse: collapse; text-align:center;">
   <thead>
     <tr style="background-color:#2F4F4F; color:white;">
       <th colspan="3">Tecnologias e Bibliotecas Utilizadas no Projeto CAD-MOTOTAXISTA</th>
