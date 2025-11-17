@@ -1,6 +1,6 @@
 <h2 align="center">CAD-MOTOTAXISTA - Documentação Técnica</h2>
 
-## 🔐 Armazenamento Seguro de Senhas com BCrypt
+### 🔐 Armazenamento Seguro de Senhas com BCrypt
 
 <p align="justify">
 O sistema <strong>CAD-MOTOTAXISTA</strong> utiliza o algoritmo <strong>BCrypt</strong> para realizar o hash das senhas antes de armazená-las no banco de dados, garantindo proteção contra ataques de força bruta e acessos indevidos. O BCrypt aplica automaticamente um <strong>salt</strong> aleatório e um número configurável de iterações (<strong>work factor</strong> ou <strong>cost</strong>), que aumenta exponencialmente o tempo necessário para gerar e validar um hash.
